@@ -252,11 +252,6 @@ button.ghost{
     transform: translateX(100%);
 }
 
-/*Move overlay to the left*/
-.container.right-panel-active .overlay-container{
-    
-    transform: translateX(-100%);
-}
 
 
 /* Bring sign up over sign in*/
@@ -267,11 +262,17 @@ button.ghost{
     z-index: 5;
 }
 
+/*Move overlay to the left*/
+.container.right-panel-active .overlay-container{
+    
+    transform: translateX(-100%);
+}
+
 
 /*Move overlay to the right*/
 
 .container.right-panel-active .overlay{
-    
+
     transform: translateX(50%);
 }
 
@@ -283,5 +284,5 @@ button.ghost{
 
 .container.right-panel-active .overlay-right{
     
-    transform: translateX(20%);
+    transform: translateX(0);
 }
