@@ -1,16 +1,19 @@
 const musicContainer = document.getElementById('music-container');
+const progressContainer = document.getElementById('progress-container');
+
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 
-const audio = document.getElementById('audio');
-const progress = document.getElementById('progress');
-const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
 const cover = document.getElementById('cover');
+const audio = document.getElementById('audio');
+const progress = document.getElementById('progress');
+
+
 
 // Song titles
-const songs = ['hey', 'summer', 'ukulele'];
+const songs = ['Blank Space', 'ME', 'You Need to Calm Down'];
 
 // Keep track of song
 let songIndex = 2;
@@ -22,7 +25,7 @@ loadSong(songs[songIndex]);
 function loadSong(song) {
   title.innerText = song;
   audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`;
+  cover.src = `images/${song}.png`;
 }
 
 // Play song
@@ -71,18 +74,23 @@ function nextSong() {
 
 // Update progress bar
 function updateProgress(e) {
+ 
   const { duration, currentTime } = e.srcElement;
+
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
 }
 
 // Set progress bar
 function setProgress(e) {
-  const width = this.clientWidth;
-  const clickX = e.offsetX;
-  const duration = audio.duration;
+  console.log( this);
+  console.log( this.clientWidth);
+  //const width = this.clientWidth;
+ 
+  //const clickX = e.offsetX;
+  //const duration = audio.duration;
 
-  audio.currentTime = (clickX / width) * duration;
+  //audio.currentTime = (clickX / width) * duration;
 }
 
 // Event listeners
@@ -99,12 +107,9 @@ playBtn.addEventListener('click', () => {
 // Change song
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
-
 // Time/song update
 audio.addEventListener('timeupdate', updateProgress);
-
 // Click on progress bar
 progressContainer.addEventListener('click', setProgress);
-
 // Song ends
 audio.addEventListener('ended', nextSong);

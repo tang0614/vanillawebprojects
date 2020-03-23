@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+* {
+    box-sizing: border-box;
+   
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    background-image: linear-gradient(100deg,rgb(250, 233, 233) 23.8%, rgb(247, 205, 205) 52%);
+    height: 100vh;
+    width: 100%;
+ 
+    font-family: 'Lato', sans-serif;
+
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.music-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 15px;
+
+    margin: 50px 0;
+    box-shadow: 0 20px 20px 0 rgba(252,169,169,0.6);
+
+    position: relative;
+    
+}
+
+
+.img-container {
+    width: 200px;
+}
+
+.img-container img{
+    
+    object-fit: cover;
+    height: 110px;
+    width: 110px;
+
+    position: absolute;
+    bottom: 25px;
+    left: -10%;
+    border-radius: 50%;
+
+    animation: rotate_var 3s linear infinite;
+
+    animation-play-state: paused;
+
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+  }
+  
+  @keyframes rotate_var {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .navigation {
+      display: flex;
+      align-items: center;
+  
+  }
+
+  .action-btn{
+      
+      color: grey;
+      padding: 0 0;
+      border: 0;
+      margin: 0 20px 0 0;
+      font-size: 20px;
+      cursor: pointer;   
+  }
+
+.action-btn.action-btn-big{
+    font-size: 25px;
+}
+
+.action-btn:focus{
+    outline: 0;
+}
+
+.music-info{
+    position: absolute;
+    top:0;
+    opacity: 0;
+    transition: 0.25s ease-in, opacity 0.25s ease-in;
+
+    transform: translateY(0%);
+}
+
+
+.music-container.play .music-info {
+    display: flex;
+    flex-direction: column;
+    
+    background-color:rgba(255, 0, 0, 0.1);;
+    padding: 10px 80px;
+    border-radius: 5px;
+    transform: translateY(-100%);
+    opacity: 1;
+   
+}
+
+.music-info h4{
+    position: relative;
+    width: 100%;
+    margin: 0px;
+}
+
+.progress-container {
+
+    height: 6px;
+    width: 100%;
+
+    position: relative;
+    left: 50px;
+ 
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    
+  }
+
+  .progress {
+    background: turquoise;
+    height: 100%;
+    width: 0%;
+  }
