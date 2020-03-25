@@ -38,7 +38,7 @@ function updateProgress() {
     secs = '0' + String(secs);
   }
 
-  timestamp.innerHTML = `${mins}:${secs}`;
+  timestamp.innerText = `${mins}:${secs}`;
 }
 
 // Set video time to progress
