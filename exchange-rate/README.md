@@ -9,3 +9,19 @@ Select countries to get the exchange rate for a specific amount
 - Display the values for both countries
 - Update values on amount change
 - Swap country rates
+
+
+### Running
+* clone this repo
+* npm init, install dependencies
+* npm start
+* go to local host
+
+
+### Exchange Rate
+[View Live here](https://xinyutang-calculator.herokuapp.com/)
+
+
+### In-app Screens
+
+![Seach key words](public/start.png)
