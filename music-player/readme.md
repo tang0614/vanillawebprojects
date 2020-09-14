@@ -18,7 +18,7 @@ Create beautiful UI to play music stored in the "music folder" using the HTML5 a
 * go to local host
 
 
-### Search Reddit
+### Listen to Music
 [View Live here](https://xinyutang-musicplayer.herokuapp.com/)
 
 
