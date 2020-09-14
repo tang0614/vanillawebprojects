@@ -1,0 +1,19 @@
+{
+  "name": "music-player",
+  "version": "1.0.0",
+  "description": "Create beautiful UI to play music stored in the \"music folder\" using the HTML5 audio API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "v12.18.2",
+    "npm": "6.14.5"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
